@@ -1,0 +1,8 @@
+" Enable IdeaVim Plugins
+" ===
+set surround
+" Have to setup Unicode Hex Input as your Input Source for this to work in
+" MacOS
+set multiple-cursors
+" Commentary not released yet
+"set commentary
