@@ -7,3 +7,15 @@
 [submodule ".vim/bundle/vim-solarized8"]
 	path = .vim/bundle/vim-solarized8
 	url = https://github.com/lifepillar/vim-solarized8
+[submodule ".vim/bundle/vim-markdown"]
+	path = .vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown
+[submodule ".vim/bundle/vim-surround"]
+	path = .vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround
+[submodule ".vim/bundle/vim-repeat"]
+	path = .vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
+[submodule ".vim/bundle/Dockerfile.vim"]
+	path = .vim/bundle/Dockerfile.vim
+	url = https://github.com/ekalinin/Dockerfile.vim.git
