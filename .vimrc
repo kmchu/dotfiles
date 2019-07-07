@@ -1,9 +1,19 @@
+" Notes
+" ===
+" - Used for both neovim and vim
+"
+" Resources
+" ===
+" - https://neovim.io/doc/user/nvim.html#nvim-from-vim
+
 " Pathogen Vim Plugin Manager
 execute pathogen#infect()
 
-" Solarized Color Scheme
+" True color support
+set termguicolors				
+" Solarized Color Scheme; use background 'dark' or 'light'
 set background=dark
-colorscheme solarized
+colorscheme solarized8
 
 filetype plugin indent on
 syntax on
@@ -14,3 +24,7 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+" Relative number
+set rnu
+" Line number for active line
+set number

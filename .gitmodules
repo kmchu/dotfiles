@@ -4,3 +4,6 @@
 [submodule ".vim/bundle/vim-freemarker"]
 	path = .vim/bundle/vim-freemarker
 	url = https://github.com/andreshazard/vim-freemarker
+[submodule ".vim/bundle/vim-solarized8"]
+	path = .vim/bundle/vim-solarized8
+	url = https://github.com/lifepillar/vim-solarized8
