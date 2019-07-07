@@ -1,6 +1,6 @@
 git clone --bare git@github.com:kmchu/dotfiles.git $HOME/.dotfiles
 function config {
-   /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
+   git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
 mkdir -p .config-backup
 config checkout
