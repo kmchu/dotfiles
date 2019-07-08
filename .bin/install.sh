@@ -1,4 +1,4 @@
-git clone --bare git@github.com:kmchu/dotfiles.git $HOME/.dotfiles
+git clone --bare --recurse-submodules git@github.com:kmchu/dotfiles.git $HOME/.dotfiles
 function config {
    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
 }
@@ -11,5 +11,4 @@ if [ $? = 0 ]; then
     config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | xargs -I{} mv {} .config-backup/{}
 fi;
 config checkout
-config submodule update --recursive
 config config status.showUntrackedFiles no
