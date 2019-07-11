@@ -3,6 +3,26 @@
 set surround
 " Have to setup Unicode Hex Input as your Input Source for this to work in
 " MacOS
-set multiple-cursors
+"set multiple-cursors
 " Commentary not released yet
 "set commentary
+
+" Settings
+" ===
+set scrolloff=3             " 3 lines above/below cursor when scrolling
+set ignorecase              " ignore case while searching
+set smartcase               " no ignore case when pattern has uppercase
+set hlsearch                " highlight matches with last search pattern
+set incsearch               " show where search pattern typed so far matches
+set relativenumber          " show the line number relative to cursor line
+set number                  " print current line number where cursor is
+
+" Custom Mappings
+" ===
+
+" mapping leader directly to space doesn't work
+nmap <SPACE> <Bslash>      
+
+" Refactoring Mappings
+nnoremap <leader>ra :action Refactorings.QuickListPopupAction<CR>
+nnoremap <leader>rr :action RenameElement<CR>
