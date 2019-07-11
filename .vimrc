@@ -31,3 +31,4 @@ set number
 set incsearch
 " Highlight all matches when search
 set hlsearch
+set backspace=2                 " allow backspace to delete most things in insert mode
