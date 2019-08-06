@@ -1,3 +1,5 @@
+# Please run from user home directory
+
 git clone --bare --recurse-submodules git@github.com:kmchu/dotfiles.git $HOME/.dotfiles
 function config {
    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@
@@ -12,3 +14,6 @@ if [ $? = 0 ]; then
 fi;
 config checkout
 config config status.showUntrackedFiles no
+config submodule init
+config submodule update
+source .bashrc
