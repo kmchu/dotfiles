@@ -29,3 +29,5 @@ set number                      " Line number for active line
 set incsearch                   " Highlight while creating a search
 set hlsearch                    " Highlight all matches when search
 set backspace=2                 " allow backspace to delete most things in insert mode
+set wildmenu
+set wildmode=list:full
