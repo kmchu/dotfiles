@@ -26,3 +26,6 @@ nmap <SPACE> <Bslash>
 " Refactoring Mappings
 nnoremap <leader>ra :action Refactorings.QuickListPopupAction<CR>
 nnoremap <leader>rr :action RenameElement<CR>
+
+" Misc Action Mappings
+nnoremap <leader>ar :action Run<CR>
