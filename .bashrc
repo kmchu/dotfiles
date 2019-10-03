@@ -7,8 +7,15 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     export PATH="$PATH:$ANDROID_HOME/tools"
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
-# elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux/Windows Subsystem for Linux
+    export DOCKER_HOST="http://localhost:2375"
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+    export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+    # Install Ruby Gems to ~/gems
+    export GEM_HOME="$HOME/gems"
+    export PATH="$HOME/gems/bin:$PATH"
 fi
 
 # Custom Aliases
