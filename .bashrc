@@ -7,7 +7,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     export PATH="$PATH:$ANDROID_HOME/tools"
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
-    export TERM="xterm"
+    export TERM="screen-256color"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux/Windows Subsystem for Linux
     export DOCKER_HOST="http://localhost:2375"
