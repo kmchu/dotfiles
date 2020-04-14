@@ -7,6 +7,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     export PATH="$PATH:$ANDROID_HOME/tools"
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
+    export TERM="xterm"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux/Windows Subsystem for Linux
     export DOCKER_HOST="http://localhost:2375"
@@ -21,5 +22,6 @@ fi
 # Custom Aliases
 cdls() { cd "$@" && ls -la; }
 alias ll='ls -la'
+alias vim='nvim'
 # For dotfile management
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
