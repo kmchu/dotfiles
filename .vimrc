@@ -1,6 +1,6 @@
 " Notes
 " ===
-" - Used for both neovim and vim
+" - Used for both neovim, and tmux
 "
 " Resources
 " ===
@@ -31,3 +31,9 @@ set hlsearch                    " Highlight all matches when search
 set backspace=2                 " allow backspace to delete most things in insert mode
 set wildmenu
 set wildmode=list:full
+
+" Change cursor style based on mode
+" https://vim.fandom.com/wiki/Change_cursor_shape_in_different_modes
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
