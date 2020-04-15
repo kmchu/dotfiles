@@ -31,6 +31,8 @@ set hlsearch                    " Highlight all matches when search
 set backspace=2                 " allow backspace to delete most things in insert mode
 set wildmenu
 set wildmode=list:full
+" Android dev specific ignores
+set wildignore+=*/build/generated/*,*/build/intermediates/*,*/build/kotlin/*,*/build/tmp/*
 
 " Change cursor style based on mode
 " https://vim.fandom.com/wiki/Change_cursor_shape_in_different_modes
