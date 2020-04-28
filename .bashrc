@@ -7,6 +7,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     export PATH="$PATH:$ANDROID_HOME/tools"
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
+    export PATH="$PATH:~/Projects/kotlin-language-server/server/build/install/server/bin"
     export TERM="screen-256color"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux/Windows Subsystem for Linux

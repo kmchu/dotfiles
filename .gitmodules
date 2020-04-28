@@ -25,3 +25,9 @@
 [submodule ".vim/bundle/vim-tmux-navigator"]
 	path = .vim/bundle/vim-tmux-navigator
 	url = https://github.com/christoomey/vim-tmux-navigator
+[submodule ".vim/bundle/nvim-lsp"]
+	path = .vim/bundle/nvim-lsp
+	url = git@github.com:neovim/nvim-lsp.git
+[submodule ".vim/bundle/kotlin-vim"]
+	path = .vim/bundle/kotlin-vim
+	url = https://github.com/udalov/kotlin-vim
