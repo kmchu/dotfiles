@@ -9,6 +9,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
     export PATH="$PATH:~/Projects/kotlin-language-server/server/build/install/server/bin"
     export TERM="screen-256color"
+    export JAVA_HOME=$(/usr/libexec/java_home)
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux/Windows Subsystem for Linux
     export DOCKER_HOST="http://localhost:2375"
@@ -19,6 +20,8 @@ elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     export GEM_HOME="$HOME/gems"
     export PATH="$HOME/gems/bin:$PATH"
 fi
+
+export GIT_EDITOR="nvim"
 
 # Custom Aliases
 cdls() { cd "$@" && ls -la; }
