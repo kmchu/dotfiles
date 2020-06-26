@@ -54,13 +54,13 @@ nnoremap <silent> <Leader>cg :Clap grep<CR>
 
 " LSP
 " ===
-lua << EOF
+" lua << EOF
 
-local nvim_lsp = require'nvim_lsp'
-nvim_lsp.kotlinls.setup{}
-nvim_lsp.bashls.setup{}
+" local nvim_lsp = require'nvim_lsp'
+" nvim_lsp.kotlinls.setup{}
+" nvim_lsp.bashls.setup{}
 
-EOF
+" EOF
 
 autocmd Filetype kotlin,sh setlocal omnifunc=v:lua.vim.lsp.omnifunc
 
