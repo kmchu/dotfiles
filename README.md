@@ -6,6 +6,12 @@ Personal configuration files for MacOS.
 1. Copy `.bin/install.sh` onto local system
 1. Run script
 
+## Update VIM plugins
+```
+cd ~
+config submodule update --recursive --remote
+```
+
 ## Resources
 - [Guide for this dotfile management technique](https://www.atlassian.com/git/tutorials/dotfiles)
 - [Dotfiles associated with above guide author](https://bitbucket.org/durdn/cfg/src/master/)
