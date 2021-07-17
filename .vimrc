@@ -52,23 +52,16 @@ map <Space> <Leader>
 nnoremap <silent> <Leader>cf :Clap files<CR>
 nnoremap <silent> <Leader>cg :Clap grep<CR>
 
-" LSP
-" ===
-" lua << EOF
-
-" local nvim_lsp = require'nvim_lsp'
-" nvim_lsp.kotlinls.setup{}
-" nvim_lsp.bashls.setup{}
-
-" EOF
-
-autocmd Filetype kotlin,sh setlocal omnifunc=v:lua.vim.lsp.omnifunc
-
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
-nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+" COC
+let g:coc_global_extensions = [ 'coc-tsserver' ]
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ac  <Plug>(coc-codeaction)
+" Apply AutoFix to problem on the current line.
+nmap <leader>qf  <Plug>(coc-fix-current)
+" Show autocomplete when Tab is pressed
+inoremap <silent><expr> <Tab> coc#refresh()
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
