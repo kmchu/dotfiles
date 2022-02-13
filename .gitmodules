@@ -34,3 +34,9 @@
 [submodule ".vim/bundle/coc.nvim"]
 	path = .vim/bundle/coc.nvim
 	url = git@github.com:neoclide/coc.nvim.git
+[submodule ".vim/bundle/telescope.nvim"]
+	path = .vim/bundle/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule ".vim/bundle/plenary.nvim"]
+	path = .vim/bundle/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim

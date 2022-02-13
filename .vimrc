@@ -48,20 +48,28 @@ nnoremap <Space> <Nop>
 vnoremap <Space> <Nop>
 map <Space> <Leader>
 
+tnoremap <Esc> <C-\><C-n>
+
+" telescope.nvim
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 " vim-clap
-nnoremap <silent> <Leader>cf :Clap files<CR>
-nnoremap <silent> <Leader>cg :Clap grep<CR>
+" nnoremap <silent> <Leader>cf :Clap files<CR>
+" nnoremap <silent> <Leader>cg :Clap grep<CR>
 
 " COC
-let g:coc_global_extensions = [ 'coc-tsserver' ]
+" let g:coc_global_extensions = [ 'coc-tsserver' ]
 " Remap keys for applying codeAction to the current line.
-nmap <leader>ac  <Plug>(coc-codeaction)
+" nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-nmap <leader>qf  <Plug>(coc-fix-current)
+" nmap <leader>qf  <Plug>(coc-fix-current)
 " Show autocomplete when Tab is pressed
-inoremap <silent><expr> <Tab> coc#refresh()
+" inoremap <silent><expr> <Tab> coc#refresh()
 " GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+" nmap <silent> gd <Plug>(coc-definition)
+" nmap <silent> gy <Plug>(coc-type-definition)
+" nmap <silent> gi <Plug>(coc-implementation)
+" nmap <silent> gr <Plug>(coc-references)
