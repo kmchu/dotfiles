@@ -20,8 +20,7 @@ set number                  " print current line number where cursor is
 " Custom Mappings
 " ===
 
-" mapping leader directly to space doesn't work
-nmap <SPACE> <Bslash>      
+let mapleader = " "
 
 " Refactoring Mappings
 nnoremap <leader>ra :action Refactorings.QuickListPopupAction<CR>
