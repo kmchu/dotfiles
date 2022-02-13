@@ -6,8 +6,28 @@
 " ===
 " - https://neovim.io/doc/user/nvim.html#nvim-from-vim
 
-" Pathogen Vim Plugin Manager
-execute pathogen#infect()
+call plug#begin()
+
+" File support
+Plug 'ekalinin/Dockerfile.vim'
+Plug 'udalov/kotlin-vim'
+Plug 'andreshazard/vim-freemarker'
+Plug 'tpope/vim-markdown'
+
+" Integrations
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" Enhancements
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+
+" Theme
+Plug 'lifepillar/vim-solarized8'
+
+call plug#end()
 
 " True color support, only available on Vim 8.+
 if exists("&termguicolors")
