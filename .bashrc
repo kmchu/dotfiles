@@ -7,7 +7,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
     export PATH="$PATH:~/Projects/kotlin-language-server/server/build/install/server/bin"
     export TERM="screen-256color"
-    export JAVA_HOME=$(/usr/libexec/java_home)
+    export JAVA_HOME=$(/usr/libexec/java_home -v17)
+
+    # Bash completion delegation
+    # https://gist.github.com/mwhite/6887990
+    [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux/Windows Subsystem for Linux
     export DOCKER_HOST="http://localhost:2375"
@@ -23,10 +27,11 @@ fi
 export GIT_EDITOR="nvim"
 set -o vi
 
-# Custom Aliases
+# For dotfile management
+alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# General Aliases
 cdls() { cd "$@" && ls -la; }
 alias ll='ls -la'
 alias vim='nvim'
 
-# For dotfile management
-alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
