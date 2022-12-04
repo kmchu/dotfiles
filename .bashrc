@@ -8,6 +8,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export PATH="$PATH:~/Projects/kotlin-language-server/server/build/install/server/bin"
     export TERM="screen-256color"
     export JAVA_HOME=$(/usr/libexec/java_home -v17)
+    export BASH_SILENCE_DEPRECATION_WARNING=1
 
     # Bash completion delegation
     # https://gist.github.com/mwhite/6887990
