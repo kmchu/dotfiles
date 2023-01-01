@@ -1,6 +1,6 @@
 if [[ "$OSTYPE" == "darwin"* ]]; then
     # Mac OS 
-    export PATH="$HOME/.homebrew/bin:$PATH"
+    export PATH="$HOME/.homebrew/bin:$HOME/.local/bin:$PATH"
 
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     export PATH="$PATH:$ANDROID_HOME/tools"
