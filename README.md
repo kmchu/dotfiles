@@ -1,7 +1,7 @@
 # dotfiles
 Personal configuration files for MacOS.
 
-## Installaton
+## Installation
 1. Setup ssh access to this repo
 1. Copy `.bin/install.sh` onto local system
 1. Run script
@@ -11,6 +11,9 @@ Personal configuration files for MacOS.
 1. Open NeoVim
 1. Run `:PlugInstall`
 1. Optionally, you can update plugins using `:PlugUpdate`
+
+## Update tmux plugins
+1. Press prefix + I (capital i, as in Install) to fetch the plugin.
 
 ## Resources
 - [Guide for this dotfile management technique](https://www.atlassian.com/git/tutorials/dotfiles)
