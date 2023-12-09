@@ -124,5 +124,7 @@
     # purge all local branches that were tracking a remote branch, on origin, where the remote branch has been deleted (gone)
     # https://stackoverflow.com/a/48650112
     prune-branches = "!git remote prune origin && git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -r git branch -d"
+
+    unstage = "!git reset HEAD --"
 [init]
 	defaultBranch = main
