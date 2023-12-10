@@ -13,6 +13,11 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     # Bash completion delegation
     # https://gist.github.com/mwhite/6887990
     [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+
+    # NVM set needed for managing node versionis
+    export NVM_DIR="$HOME/.nvm"
+    [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+    [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
     # Linux/Windows Subsystem for Linux
     export DOCKER_HOST="http://localhost:2375"
