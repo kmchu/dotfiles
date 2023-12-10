@@ -27,6 +27,8 @@ Plug 'tpope/vim-commentary'
 " Theme
 Plug 'lifepillar/vim-solarized8'
 
+Plug 'neovim/nvim-lspconfig' " Configuration for Nvim LSP
+
 call plug#end()
 
 " True color support, only available on Vim 8.+
