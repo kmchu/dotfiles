@@ -118,6 +118,10 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 :    let l = line("$")
 :  endif
 :  exe "1," . l . "g/title: /s/title: .*/title: " . expand('%:t:r')
+:  exe "1," . l . "g/title: /s/_/\./"
+:  exe "1," . l . "g/title: /s/-/ /g"
+:  exe "1," . l . "g/title: /s/\\<./\\u&/g"
+:  exe "1," . l . "g/Title: /s/Title:/title:/"
 :endfun
 
 :autocmd BufNewFile *.md  ks|call MdTitle()|'s
@@ -127,5 +131,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 :  else
 :    let l = line("$")
 :  endif
-:  exe "1," . l . "g/# <title>/s/# .*/# " . expand('%:t:r')
+:  exe "1," . l . "g/^# /s/# .*/# " . expand('%:t:r')
+:  exe "1," . l . "g/^# /s/_/\."
+:  exe "1," . l . "g/^# /s/-/ /g"
+:  exe "1," . l . "g/^# /s/\\<./\\u&/g"
 :endfun
