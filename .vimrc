@@ -95,3 +95,37 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " nmap <silent> gy <Plug>(coc-type-definition)
 " nmap <silent> gi <Plug>(coc-implementation)
 " nmap <silent> gr <Plug>(coc-references)
+
+" Templates
+" ===
+:autocmd BufNewFile *.md	0r ~/.vim/templates/skeleton.md
+
+:autocmd BufNewFile *.md  ks|call MdFmDate()|'s
+:fun MdFmDate()
+:  if line("$") > 20
+:    let l = 20
+:  else
+:    let l = line("$")
+:  endif
+:  exe "1," . l . "g/date: /s/date: .*/date: " . strftime("%Y-%m-%d %X")
+:endfun
+
+:autocmd BufNewFile *.md  ks|call MdFmTitle()|'s
+:fun MdFmTitle()
+:  if line("$") > 20
+:    let l = 20
+:  else
+:    let l = line("$")
+:  endif
+:  exe "1," . l . "g/title: /s/title: .*/title: " . expand('%:t:r')
+:endfun
+
+:autocmd BufNewFile *.md  ks|call MdTitle()|'s
+:fun MdTitle()
+:  if line("$") > 20
+:    let l = 20
+:  else
+:    let l = line("$")
+:  endif
+:  exe "1," . l . "g/# <title>/s/# .*/# " . expand('%:t:r')
+:endfun
