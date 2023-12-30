@@ -12,7 +12,8 @@ call plug#begin()
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'andreshazard/vim-freemarker'
-Plug 'tpope/vim-markdown'
+Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Integrations
 Plug 'christoomey/vim-tmux-navigator'
@@ -42,6 +43,8 @@ set background=dark
 colorscheme solarized8
 
 filetype plugin indent on
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 syntax on
 set tabstop=4                   " show existing tab with 4 spaces width
 set shiftwidth=4                " when indenting with '>', use 4 spaces width
@@ -136,3 +139,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 :  exe "1," . l . "g/^# /s/-/ /g"
 :  exe "1," . l . "g/^# /s/\\<./\\u&/g"
 :endfun
+
+" Disable vim-pandoc modules
+let g:pandoc#modules#disabled = ["folding"]

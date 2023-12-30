@@ -7,7 +7,6 @@ local lspconfig = require('lspconfig')
 lspconfig.html.setup {}
 lspconfig.cssls.setup {}
 lspconfig.tsserver.setup {}
-lspconfig.marksman.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
