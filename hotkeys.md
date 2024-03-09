@@ -49,4 +49,6 @@ where they are available):
 - *<localleader>lcn*   move to the [count] nth list item child [n]
 - *<localleader>cb*    toggle checkbox or insert empty checkbox in list item [vn]
 - *<localleader>cd*    remove existing checkbox from list item [vn]
+
+- CTRL-X CTRL-O        Omni-completion [for citations]
 ```
