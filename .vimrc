@@ -142,3 +142,8 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 " Disable vim-pandoc modules
 let g:pandoc#modules#disabled = ["folding"]
+
+" Bibliography completion
+let g:pandoc#biblio#sources = 'bcgyG'
+let g:pandoc#completion#bib#mode = 'fallback'
+let g:pandoc#completion#bib#use_preview = 1
