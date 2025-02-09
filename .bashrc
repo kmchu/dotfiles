@@ -10,6 +10,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     export JAVA_HOME=$(/usr/libexec/java_home -v17)
     export BASH_SILENCE_DEPRECATION_WARNING=1
 
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+
     # Bash completion delegation
     # https://gist.github.com/mwhite/6887990
     [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
