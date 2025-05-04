@@ -18,8 +18,9 @@ call plug#begin()
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'andreshazard/vim-freemarker'
-Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+" TODO: https://github.com/kmchu/dotfiles/issues/1
+" Plug 'vim-pandoc/vim-pandoc'
+" Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Integrations
 Plug 'christoomey/vim-tmux-navigator'
