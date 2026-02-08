@@ -36,6 +36,9 @@ Plug 'tpope/vim-commentary'
 Plug 'lifepillar/vim-solarized8'
 
 Plug 'neovim/nvim-lspconfig' " Configuration for Nvim LSP
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'jc-doyle/cmp-pandoc-references'
 
 call plug#end()
 

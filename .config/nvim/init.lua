@@ -2,15 +2,51 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
+-- Set completeopt for desired menu behavior
+--vim.opt.completeopt = "menu,menuone,noselect"
+
+-- Set up nvim-cmp
+local cmp = require('cmp')
+
+cmp.setup({
+  -- Configure snippet support if using a snippet engine
+  snippet = {
+    expand = function(args)
+        vim.snippet.expand(args.body)
+    end,
+  },
+
+  -- Define key mappings for navigation and actions
+  mapping = cmp.mapping.preset.insert({
+    ['<C-p>'] = cmp.mapping.select_prev_item(), -- Select previous item
+    ['<C-n>'] = cmp.mapping.select_next_item(), -- Select next item
+    ['<C-j>'] = cmp.mapping.complete(),     -- Trigger completion manually
+    ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Confirm selection
+    ['<C-e>'] = cmp.mapping.abort(),            -- Abort completion
+  }),
+
+  -- Configure sources for completion results
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' }, -- LSP completion
+    { name = 'pandoc_references' }, 
+  }),
+})
+
+-- Get default LSP capabilities and pass them to LSP servers for nvim-cmp integration
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 -- LSP setup
-local lspconfig = require('lspconfig')
-lspconfig.html.setup {}
-lspconfig.cssls.setup {}
-lspconfig.ts_ls.setup {}
-lspconfig.marksman.setup {
+-- vim.lsp.config("marksman", {
+--   on_attach = LspOnAttach,
+--   capabilities = LspCapabilities,
+-- })
+-- vim.lsp.enable({marksman, html, cssls, ts_ls})
+-- LSP setup
+vim.lsp.config('marksman', {
   on_attach = LspOnAttach,
   capabilities = LspCapabilities,
-}
+})
+vim.lsp.enable({"marksman", "html", "cssls", "ts_ls"})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
