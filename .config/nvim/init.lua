@@ -2,9 +2,6 @@
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
--- Set completeopt for desired menu behavior
---vim.opt.completeopt = "menu,menuone,noselect"
-
 -- Set up nvim-cmp
 local cmp = require('cmp')
 
@@ -27,7 +24,7 @@ cmp.setup({
 
   -- Configure sources for completion results
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' }, -- LSP completion
+    { name = 'nvim_lsp' }, 
     { name = 'pandoc_references' }, 
   }),
 })
@@ -35,12 +32,6 @@ cmp.setup({
 -- Get default LSP capabilities and pass them to LSP servers for nvim-cmp integration
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- LSP setup
--- vim.lsp.config("marksman", {
---   on_attach = LspOnAttach,
---   capabilities = LspCapabilities,
--- })
--- vim.lsp.enable({marksman, html, cssls, ts_ls})
 -- LSP setup
 vim.lsp.config('marksman', {
   on_attach = LspOnAttach,

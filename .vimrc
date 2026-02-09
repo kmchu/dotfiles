@@ -18,9 +18,6 @@ call plug#begin()
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'udalov/kotlin-vim'
 Plug 'andreshazard/vim-freemarker'
-" TODO: https://github.com/kmchu/dotfiles/issues/1
-" Plug 'vim-pandoc/vim-pandoc'
-" Plug 'vim-pandoc/vim-pandoc-syntax'
 
 " Integrations
 Plug 'christoomey/vim-tmux-navigator'
@@ -95,20 +92,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 " nnoremap <silent> <Leader>cf :Clap files<CR>
 " nnoremap <silent> <Leader>cg :Clap grep<CR>
 
-" COC
-" let g:coc_global_extensions = [ 'coc-tsserver' ]
-" Remap keys for applying codeAction to the current line.
-" nmap <leader>ac  <Plug>(coc-codeaction)
-" Apply AutoFix to problem on the current line.
-" nmap <leader>qf  <Plug>(coc-fix-current)
-" Show autocomplete when Tab is pressed
-" inoremap <silent><expr> <Tab> coc#refresh()
-" GoTo code navigation.
-" nmap <silent> gd <Plug>(coc-definition)
-" nmap <silent> gy <Plug>(coc-type-definition)
-" nmap <silent> gi <Plug>(coc-implementation)
-" nmap <silent> gr <Plug>(coc-references)
-
 " Templates
 " ===
 :autocmd BufNewFile *.md	0r ~/.vim/templates/skeleton.md
@@ -149,11 +132,3 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 :  exe "1," . l . "g/^# /s/-/ /g"
 :  exe "1," . l . "g/^# /s/\\<./\\u&/g"
 :endfun
-
-" Disable vim-pandoc modules
-let g:pandoc#modules#disabled = ["folding"]
-
-" Bibliography completion
-let g:pandoc#biblio#sources = 'bcgyG'
-let g:pandoc#completion#bib#mode = 'fallback'
-let g:pandoc#completion#bib#use_preview = 1
